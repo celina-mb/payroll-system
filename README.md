@@ -5,7 +5,7 @@ There is no doubt that enterprises, both big and small, are always seeking innov
 
 Although there are already big solutions available in the market, such as SAP's payroll management system, these solutions are **expensive and complicated** to implement for small businesses. Another highlight is that it can be used in diverse industries, such as entertainment, grocery stores and real estate.
 
-**Object-Oriented Programming**
+**Object-Oriented Programming**\n
 By modelling the solution using OOP's principles, it allows for the code to be reused, while improving readability and performance. In this way, objects can be specific parts of the program, which have attributes and methods. For instance, some classes that can be included as part of my solution are: Person, Administrator, Employee, System, and Benefits.
 
 Resources consulted:
