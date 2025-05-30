@@ -10,7 +10,7 @@ Although there are already big solutions available in the market, such as SAP's 
 **Proposed solution**
 **Object-Oriented Programming**
 
-By modelling the solution using OOP's principles, it allows for the code to be reused, while improving readability and performance. In this way, objects can be specific parts of the program, which have attributes and methods. For instance, some classes that can be included as part of my solution are: Person, Administrator, Employee, System, and Benefits.
+By modelling the solution using OOP's principles, it allows for the code to be reused, while improving readability and performance. In this way, objects can be specific parts of the program, which have attributes and methods. For instance, some classes that can be included as part of my solution are: Person, Boss, Employee, Company, and Department. The solution integrates vectors such that Company has Department objects and Department objects have Bosses and Employees.
 
 Resources consulted:
 SAP. (2024). _A guide to payroll management systems_. https://www.sap.com/resources/payroll-management-system
