@@ -1,22 +1,18 @@
-#ifndef DEPARTMENT_H
-#define DEPARTMENT_H
-
-#include <string>
-#include <Person.h>
+#pragma once
+#include <Employee.h>
 #include <vector>
 
 class Department{
     private:
     std::string name;
-    std::vector<Person*> members;
+    std::string id;
+    std::vector<Employee*> employees;
 
     public:
-    Department(std::string name);
-    ~Department();
+    Department(std::string name, std::string id);
 
-    void addMember(Person* member);
-    double calculateDepartmentPay();
-    void showDepartmentInfo();
+    void addEmployee(Employee* employee);
+    void removeEmployee(std::string employeeID);
+    float calculateDepartmentPay();
+    std::string displayInfo();
 };
-
-#endif
