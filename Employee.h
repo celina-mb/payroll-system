@@ -15,6 +15,7 @@ class Employee{
     std::string getName();
     std::string getID();
 
+    //virtual methods, will be overriden by subclasses
     virtual float calculatePay() = 0;
-    virtual void showInfo() = 0;
+    virtual std::string displayInfo() = 0;
 };
