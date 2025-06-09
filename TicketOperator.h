@@ -1,7 +1,5 @@
 #pragma once
-
-#include <string>
-#include "Employ.h"
+#include "Employee.h"
 
 class TicketOperator : public Employee{
     private:
@@ -10,7 +8,7 @@ class TicketOperator : public Employee{
 
     public:
     TicketOperator(std::string name, std::string id, int workingDays, float baseSalary);
-    void setTicketDetails(int, float);
-    double calculatePay() override;
-    void showInfo() override;
+    void setTicketDetails(int tickets, float commission);
+    float calculatePay() override;
+    std::string showInfo() override;
 };
