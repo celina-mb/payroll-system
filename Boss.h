@@ -1,20 +1,16 @@
-#ifndef BOSS_H
-#define BOSS
+#pragma once
+#include "Employee.h"
 
-#include <string>
-#include "Person.h"
-using namespace std;
-
-class Boss : public Person{
+class Boss : public Employee{
     private:
-    double bonus;
-    double baseSalary;
+    float bonus;
 
     public:
-    Boss(string& name, int id, string& role, double bonus, double baseSalary);
-    double calculatePay() override;
-    void showInfo() override;
-    void setBonus(double _bonus);
+    Boss(std::string name, std::string id);
+    
+    void setBonus(float qty);
+    float calculatePay() override;
+    float calculatePay(float tax);
+    std::string displayInfo() override;
 };
-#endif
 
