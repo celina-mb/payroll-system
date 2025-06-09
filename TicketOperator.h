@@ -10,5 +10,5 @@ class TicketOperator : public Employee{
     TicketOperator(std::string name, std::string id, int workingDays, float baseSalary);
     void setTicketDetails(int tickets, float commission);
     float calculatePay() override;
-    std::string showInfo() override;
+    std::string displayInfo() override;
 };
