@@ -1,20 +1,18 @@
-#ifndef COMPANY_H
-#define COMPANY_H
-
-#include "Department.h"
+#pragma once
 #include <vector>
+#include "Department.h"
 
 class Company{
     private:
-    std::vector<Department*> personnel;
+    std::string name;
+    std::vector<Department*> departments;
 
     public:
-    ~Company();
+    Company(std::string name);
 
     void addDepartment(Department* dept);
-    void removeDepartment(int index);
-    double calculateCompanyPay();
-    void showCompanyInfo();
+    void removeDepartment(std::string id);
+    float calculateCompanyPay();
+    std::string displayInfo();
+    bool operator==(Company& comp2);
 };
-
-#endif
