@@ -6,11 +6,10 @@ class Boss : public Employee{
     float bonus;
 
     public:
-    Boss(std::string name, std::string id);
+    Boss(std::string name, std::string id, int workingDays, float baseSalary, float bonus);
     
     void setBonus(float qty);
-    float calculatePay() override;
-    float calculatePay(float tax);
+    float calculateSalary(float tax);
     std::string displayInfo() override;
 };
 
