@@ -11,8 +11,8 @@ class Company{
     Company(std::string name);
 
     void addDepartment(Department* dept);
-    void removeDepartment(std::string id);
-    float calculateCompanyPay();
+    void removeDepartment(std::string deptID);
+    float calculateCompanySalaries();
     std::string displayInfo();
-    bool operator==(Company& comp2);
+    bool operator==(Company& other);
 };
