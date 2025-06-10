@@ -11,8 +11,9 @@ class Department{
     public:
     Department(std::string name, std::string id);
 
-    void addEmployee(Employee* employee);
-    void removeEmployee(std::string employeeID);
+    std::string getDepartmentID();
+    void addEmployee(Employee* emp);
+    void removeEmployee(std::string empID);
     float calculateDepartmentPay();
     std::string displayInfo();
 };
