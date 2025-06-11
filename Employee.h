@@ -14,8 +14,16 @@ class Employee{
     Employee(std::string name, std::string id, int workingDays, float baseSalary);
     std::string getName();
     std::string getID();
+    int getWorkingDays();
+    float getBaseSalary();
 
-    //virtual methods, will be overriden by subclasses
-    virtual float calculatePay() = 0;
+    //setters for attributes that might change over time
+    void setWorkingDays(int);
+    void setBaseSalary(float);
+
+    //method to be overloaded by subclasses
+    float calculateSalary();
+
+    //virtual method, will be overriden by subclasses
     virtual std::string displayInfo() = 0;
 };
