@@ -10,6 +10,8 @@ class Company{
     public:
     Company(std::string name);
 
+    std::string getName();
+
     void addDepartment(Department* dept);
     void removeDepartment(std::string deptID);
     float calculateCompanySalaries();
