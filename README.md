@@ -6,10 +6,12 @@ There is no doubt that enterprises, both big and small, are always seeking innov
 
 Although there are already big solutions available in the market, such as SAP's payroll management system, these solutions are **expensive and complicated** to implement for small businesses. Another highlight is that it can be used in diverse industries, such as entertainment, grocery stores and real estate.
 
-**Project Description**
+
 **Proposed solution**
-**Object-Oriented Programming**
 By modelling the solution using OOP's principles, it allows for the code to be reused, while improving readability and performance. In this way, objects can be specific parts of the program, which have attributes and methods. For instance, some classes that can be included as part of my solution are: Employee, Ticket Operator, Boss, Company, and Department. The solution integrates vectors such that Company has Department objects and Department objects have Bosses and Employees.
+
+![uml](https://github.com/user-attachments/assets/6cb41b54-7b63-4b47-8b74-9881906c58d6)
+
 
 Resources consulted:
 SAP. (2024). _A guide to payroll management systems_. https://www.sap.com/resources/payroll-management-system
