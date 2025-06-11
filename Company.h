@@ -5,7 +5,7 @@
 class Company{
     private:
     std::string name;
-    std::vector<Department*> departments;
+    std::vector<Department*> departments; //polymorphism
 
     public:
     Company(std::string name);
@@ -16,5 +16,5 @@ class Company{
     void removeDepartment(std::string deptID);
     float calculateCompanySalaries();
     std::string displayInfo();
-    bool operator==(Company& other);
+    bool operator==(Company& other); //operator overloading
 };
