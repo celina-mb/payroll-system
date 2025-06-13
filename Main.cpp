@@ -12,45 +12,25 @@ int main(){
     vector <Department*> departments;
 
     int choice = 0;
-    while (choice!=14){ //this would work better with 
+    while (choice!=12){ //this would work better with switch!!!!
         cout << "\n===== Payroll Management System =====\n";
-        cout << "1. View Department Details\n";
-        cout << "2. View Company Details\n";
-        cout << "3. Add Boss to Department. Its ID should start with capital b (B)\n";
-        cout << "4. Remove Boss from Department\n";
-        cout << "5. Add Ticket Operator to Department\n";
-        cout << "6. Remove Ticket Operator from Department\n";
-        cout << "7. Create Department\n";
-        cout << "8. Remove Department\n";
-        cout << "9. View Department Info\n";
-        cout << "10. Create Company\n";
-        cout << "11. View Company Info \n";
-        cout << "12. View Company Payroll \n";
-        cout << "13. Compare Departments\n";
-        cout << "14. Exit the program \n";
+        cout << "1. Add Boss to Department. Its ID should start with capital b (B)\n";
+        cout << "2. Remove Boss from Department\n";
+        cout << "3. Add Ticket Operator to Department\n";
+        cout << "4. Remove Ticket Operator from Department\n";
+        cout << "5. Create Department\n";
+        cout << "6. Remove Department\n";
+        cout << "7. View Department Info\n";
+        cout << "8. Create Company\n";
+        cout << "9. View Company Info \n";
+        cout << "10. View Company Payroll \n";
+        cout << "11. Compare Departments\n";
+        cout << "12. Exit the program \n";
         cout << "Enter your choice: ";
         cin >> choice;
 
-        ///////////////
-        if (choice==1){ //department details
-            for (auto* d: departments){ //goes over each Department pointer in the vector
-                cout<<d-> displayInfo()<<"\n";
-            }
-        }
-
-        /////////////
-        else if (choice==2){ //company details
-            if (comp){ //checks for a Company
-                cout<< comp-> displayInfo();
-            }
-
-            else{ //in case Company is a null pointer
-                cout<<"There exists no company yet.\n";
-            }
-        }
-
         //////////////
-        else if (choice==3){ //add Boss to Department
+        if (choice==1){ //add Boss to Department
             if (departments.empty()){
                 cout<<"Create a department first! \n";
                 continue;
@@ -95,7 +75,7 @@ int main(){
         }
 
         ///////////////
-        else if (choice==4){ //remove id from department
+        else if (choice==2){ //remove boss from department
             string dID, bID; //department id and boss id, respectively
             cin.ignore();
             cout<<"Enter department ID: ";
@@ -112,7 +92,7 @@ int main(){
         }
         
         //////////////
-        else if (choice==5){ //add a ticket operator to a company
+        else if (choice==3){ //add a ticket operator to a company
             if (departments.empty()){
                 cout<<"Create a department first!!\n";
                 continue;
@@ -159,7 +139,7 @@ int main(){
         }
 
         ////////////////
-        else if (choice==6){ //remove ticket operator
+        else if (choice==4){ //remove ticket operator
             string dID, tOID; //department id, ticket operator id respectively
             cin.ignore();
             cout<<"Enter department ID: ";
@@ -178,7 +158,7 @@ int main(){
         }
 
         //////////////
-        else if (choice==7){ //add department
+        else if (choice==5){ //add department
             string name, id;
             cin.ignore(1000, '\n');
             cout << "Enter Department Name: ";
@@ -192,7 +172,7 @@ int main(){
         }
 
         ///////////////
-        else if (choice==8){ //remove department
+        else if (choice=6){ //remove department
             string id;
             cin.ignore(1000, '\n');
             cout<<"Enter Department ID to remove: ";
@@ -209,7 +189,7 @@ int main(){
         }
 
         //////////////
-        else if (choice==9){ //display department info
+        else if (choice==7){ //display department info
             string id;
             cin.ignore(1000, '\n');
             cout << "Enter Department ID: ";
@@ -222,7 +202,7 @@ int main(){
         }
 
         ////////////////
-        else if (choice == 10){ //create company
+        else if (choice == 8){ //create company
             if (comp){
                 cout << "Company already exists :( \n";
             }
@@ -236,7 +216,7 @@ int main(){
         }
 
         ////////////
-        else if (choice == 11){ //display Company info
+        else if (choice == 9){ //display Company info
             if (comp) {
                 cout << comp-> displayInfo() << "\n";
             }
@@ -246,7 +226,7 @@ int main(){
         }
 
         ////////////////////
-        else if (choice==12){ //display company payroll
+        else if (choice==10){ //display company payroll
             if (comp) {
                 cout << "-----Company Payroll-----\n";
                 cout<<comp-> getName()<<"\n";
@@ -301,7 +281,7 @@ int main(){
         }
 
         //////////
-        else if (choice==13){ //compare two department's payroll
+        else if (choice==11){ //compare two department's payroll
             if (departments.size()<2){
                 cout << "Two departments needed for comparison.\n";
             }
@@ -334,7 +314,7 @@ int main(){
         }
 
         ////////////
-        else if (choice==14){ //exit the program
+        else if (choice==12){ //exit the program
             cout <<"Exiting the program, bye bye.\n";
         }
 
