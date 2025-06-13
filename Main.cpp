@@ -16,7 +16,7 @@ int main(){
         cout << "\n===== Payroll Management System =====\n";
         cout << "1. View Department Details\n";
         cout << "2. View Company Details\n";
-        cout << "3. Add Boss to Department\n";
+        cout << "3. Add Boss to Department. Its ID should start with capital b (B)\n";
         cout << "4. Remove Boss from Department\n";
         cout << "5. Add Ticket Operator to Department\n";
         cout << "6. Remove Ticket Operator from Department\n";
@@ -31,12 +31,14 @@ int main(){
         cout << "Enter your choice: ";
         cin >> choice;
 
+        ///////////////
         if (choice==1){ //department details
             for (auto* d: departments){ //goes over each Department pointer in the vector
                 cout<<d-> displayInfo()<<"\n";
             }
         }
 
+        /////////////
         else if (choice==2){ //company details
             if (comp){ //checks for a Company
                 cout<< comp-> displayInfo();
@@ -47,6 +49,7 @@ int main(){
             }
         }
 
+        //////////////
         else if (choice==3){ //add Boss to Department
             if (departments.empty()){
                 cout<<"Create a department first! \n";
@@ -60,7 +63,7 @@ int main(){
             cin.ignore();
             cout<< "Enter Boss name: ";
             getline(cin, name);
-            cout<< "Enter Boss ID: ";
+            cout<< "Enter Boss ID: "; //Boss ID should start with capital B (B)
             getline(cin, id);
             cout<< "Working days (numerically): ";
             cin >> days;
@@ -71,18 +74,19 @@ int main(){
 
             Boss* boss = new Boss (name, id, days, base, bonus);
 
+            
+
             cin.ignore();
             string dID;
             cout << "Assign to (Department ID): ";
             getline(cin, dID);
 
-            bool found = false; //control in case 
+            bool found = false; //control whether the department exists or not
             for (auto* d : departments) {
                 if (d->getDepartmentID() == dID) {
                     d->addEmployee(boss);
                     cout << "Boss added to department.\n";
                     found = true;
-                    break;
                 }
             }
             if (!found){
@@ -90,6 +94,7 @@ int main(){
             }
         }
 
+        ///////////////
         else if (choice==4){
             string dID, bID; //department id and boss id, respectively
             cin.ignore();
@@ -102,13 +107,11 @@ int main(){
                     d->removeEmployee(bID);
                     cout<< "Boss removed \n";
                 }
-                else{
-                    cout<<"Boss not found \n";
-                }
             }
 
         }
         
+        //////////////
         else if (choice==5){
             if (departments.empty()){
                 cout<<"Create a department first!!\n";
@@ -155,7 +158,8 @@ int main(){
             }
         }
 
-        else if (choice==6){ //remove employee
+        ////////////////
+        else if (choice==6){ //remove ticket operator
             string dID, tOID; //department id, ticket operator id respectively
             cin.ignore();
             cout<<"Enter department ID: ";
@@ -173,7 +177,8 @@ int main(){
             }
         }
 
-        else if (choice==7){
+        //////////////
+        else if (choice==7){ //add department
             string name, id;
             cin.ignore(1000, '\n');
             cout << "Enter Department Name: ";
@@ -186,7 +191,8 @@ int main(){
             cout << "Department created.\n";
         }
 
-        else if (choice==8){
+        ///////////////
+        else if (choice==8){ //remove department
             string id;
             cin.ignore(1000, '\n');
             cout<<"Enter Department ID to remove: ";
@@ -202,7 +208,8 @@ int main(){
             }
         }
 
-        else if (choice==9){
+        //////////////
+        else if (choice==9){ //display department info
             string id;
             cin.ignore(1000, '\n');
             cout << "Enter Department ID: ";
@@ -214,7 +221,8 @@ int main(){
             }
         }
 
-        else if (choice == 10){
+        ////////////////
+        else if (choice == 10){ //create company
             if (comp){
                 cout << "Company already exists :( \n";
             }
@@ -227,7 +235,7 @@ int main(){
 
         }
 
-        else if (choice == 11){
+        else if (choice == 11){ //display Company info
             if (comp) {
                 cout << comp-> displayInfo() << "\n";
             }
@@ -236,6 +244,7 @@ int main(){
             }
         }
 
+        ////////////////////
         else if (choice==12){
             if (comp) {
                 cout << "-----Company Payroll-----\n";
@@ -290,6 +299,7 @@ int main(){
             }
         }
 
+        //////////
         else if (choice==13){
             if (departments.size()<2){
                 cout << "Two departments needed for comparison.\n";
