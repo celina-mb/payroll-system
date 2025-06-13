@@ -12,7 +12,7 @@ int main(){
     vector <Department*> departments;
 
     int choice = 0;
-    while (choice!=14){
+    while (choice!=14){ //this would work better with 
         cout << "\n===== Payroll Management System =====\n";
         cout << "1. View Department Details\n";
         cout << "2. View Company Details\n";
@@ -78,7 +78,7 @@ int main(){
 
             cin.ignore();
             string dID;
-            cout << "Assign to (Department ID): ";
+            cout << "Assign to (Department ID): "; //inputs for department id
             getline(cin, dID);
 
             bool found = false; //control whether the department exists or not
@@ -95,7 +95,7 @@ int main(){
         }
 
         ///////////////
-        else if (choice==4){
+        else if (choice==4){ //remove id from department
             string dID, bID; //department id and boss id, respectively
             cin.ignore();
             cout<<"Enter department ID: ";
@@ -112,7 +112,7 @@ int main(){
         }
         
         //////////////
-        else if (choice==5){
+        else if (choice==5){ //add a ticket operator to a company
             if (departments.empty()){
                 cout<<"Create a department first!!\n";
                 continue;
@@ -235,6 +235,7 @@ int main(){
 
         }
 
+        ////////////
         else if (choice == 11){ //display Company info
             if (comp) {
                 cout << comp-> displayInfo() << "\n";
@@ -245,7 +246,7 @@ int main(){
         }
 
         ////////////////////
-        else if (choice==12){
+        else if (choice==12){ //display company payroll
             if (comp) {
                 cout << "-----Company Payroll-----\n";
                 cout<<comp-> getName()<<"\n";
@@ -300,7 +301,7 @@ int main(){
         }
 
         //////////
-        else if (choice==13){
+        else if (choice==13){ //compare two department's payroll
             if (departments.size()<2){
                 cout << "Two departments needed for comparison.\n";
             }
@@ -331,7 +332,9 @@ int main(){
                 cout << "Comparison couldn't be processed (Invalid Department IDs). \n";
             }
         }
-        else if (choice==14){
+
+        ////////////
+        else if (choice==14){ //exit the program
             cout <<"Exiting the program, bye bye.\n";
         }
 
